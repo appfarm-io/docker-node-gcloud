@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM node:10
 
 ENV HOME /root
 WORKDIR /root
@@ -10,4 +10,5 @@ RUN apt-get update && apt-get install -y apt-transport-https curl  &&\
 	apt-get -y upgrade && \
 	apt-get -y install \
 		curl \
-		google-cloud-sdk
+		google-cloud-sdk \
+		kubectl
